@@ -1,0 +1,43 @@
+# Virtual Environments
+venv/
+.venv/
+.venv_check/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Uploaded files
+uploads/
+
+# Chroma Database
+chroma_db/
+
+# VS Code
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Build files
+dist/
+build/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db

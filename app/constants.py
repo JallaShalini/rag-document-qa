@@ -1,0 +1,5 @@
+API_TITLE = 'RAG Document QA API'
+SUPPORTED_FILE_EXTENSIONS = ['.txt', '.md', '.pdf']
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 200
+TOP_K = 3

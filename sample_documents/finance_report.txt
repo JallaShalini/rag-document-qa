@@ -1,0 +1,21 @@
+Q2 2026 Finance Report
+
+Executive Summary:
+
+Revenue grew by 14% compared to Q1, driven by increased subscription sales and new enterprise contracts. Operating expenses remained stable, while gross margin improved from 47% to 52%.
+
+Key Metrics:
+- Total revenue: $4.8M
+- Operating expenses: $2.1M
+- Net profit: $900K
+- Customer retention: 89%
+
+Highlights:
+- Subscription renewals increased by 18%.
+- New product launch contributed $450K in new annual recurring revenue.
+- Marketing expenses were contained at 11% of revenue.
+
+Action Items:
+- Continue investment in sales enablement to support enterprise expansion.
+- Tighten inventory management to preserve margin.
+- Evaluate the pilot ERP automation tool for Q3 deployment.
