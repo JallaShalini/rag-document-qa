@@ -25,7 +25,7 @@ def test_get_client_returns_fake_client(monkeypatch, tmp_path: Path):
     fake_chromadb = types.ModuleType('chromadb')
     fake_config = types.ModuleType('chromadb.config')
     fake_config.Settings = DummySettings
-    fake_chromadb.Client = lambda settings: FakeClient()
+    fake_chromadb.PersistentClient = lambda path: FakeClient()
 
     monkeypatch.setitem(sys.modules, 'chromadb', fake_chromadb)
     monkeypatch.setitem(sys.modules, 'chromadb.config', fake_config)

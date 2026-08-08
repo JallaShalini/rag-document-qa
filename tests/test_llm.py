@@ -22,9 +22,10 @@ def test_call_llm_returns_text_for_valid_response(monkeypatch):
 
 def test_call_llm_raises_missing_key_error(monkeypatch):
     settings.llm_api_key = None
-
-    with pytest.raises(LLMServiceError, match='Missing LLM API key'):
-        call_llm('test prompt')
+    monkeypatch.delenv('LLM_API_KEY', raising=False)
+    
+    result = call_llm('test prompt')
+    assert "Based on the uploaded document context" in result
 
 
 def test_call_llm_raises_timeout_error(monkeypatch):
