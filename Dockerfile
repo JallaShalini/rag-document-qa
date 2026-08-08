@@ -4,14 +4,14 @@ WORKDIR /app
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        build-essential \
-        pkg-config \
-        libcairo2-dev \
-        python3-dev && \
+    build-essential \
+    pkg-config \
+    libcairo2-dev \
+    python3-dev && \
     rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN python -m pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+RUN python -m pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
 
 COPY . .
 RUN mkdir -p /app/uploads /app/logs /app/chroma_db

@@ -1,0 +1,33 @@
+========================================
+DASHBOARD TEST INSTRUCTIONS (JSON PAYLOADS)
+========================================
+
+If you are using the Swagger UI Dashboard (http://localhost:9090/docs), here is what you need to put into the 'Request Body' when you click "Try it out":
+
+1. POST /upload
+   - Simply click the "Choose File" button and upload `sample_documents/company_report.pdf`
+   - Click "Execute"
+
+2. POST /query
+   - Paste the following into the multiline text block:
+   {
+      "question": "What is the main idea of the document?"
+   }
+   - Click "Execute"
+
+3. GET /report
+   - Just click "Execute" (no payload needed)
+
+========================================
+TERMINAL / cURL TEST COMMANDS
+========================================
+If you prefer running commands directly in your terminal for the demo video:
+
+1. Upload the file:
+   curl -X POST "http://localhost:9090/upload" -F "file=@sample_documents/company_report.pdf"
+
+2. Query the data:
+   curl -X POST "http://localhost:9090/query" -H "Content-Type: application/json" -d "{\"question\": \"What is the main idea of the document?\"}"
+
+3. Get the report telemetry:
+   curl -X GET "http://localhost:9090/report"
